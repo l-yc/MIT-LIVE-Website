@@ -5,23 +5,19 @@
 // URL of your website
 export const website = 'https://sveltekit-blog-template.vercel.app'
 
-export const firstName = 'Jordan'
-export const lastName = 'Doe'
-export const name = `${firstName} ${lastName}`
+export const name = `MIT LIVE`
 
 // Used for the landing page & footer of posts
-export const avatar = 'https://picsum.photos/id/203/250/250'
+export const avatar = './logo.png'
 export const bio = `\
-I’m ${firstName}, a software engineer based in Canada. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Phasellus accumsan quam at eros malesuada, id luctus lectus efficitur. Nulla
-sit amet arcu mi. Duis quis mauris malesuada, posuere orci et, pulvinar nisl. Nam malesuada
-vehicula sapien vitae sagittis.
+We're MIT LIVE, one of MIT's newest music groups centered around giving musicians the opportunity to play with others in a live setting!
 `
 
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,
 // but you can replace with just your username.
-export const github = 'mattjennings/sveltekit-blog-template'
+//export const github = 'mattjennings/sveltekit-blog-template'
+export const github = ''
 export const twitter = ''
 export const linkedin = ''
-export const instagram = ''
+export const instagram = 'mitliveband'

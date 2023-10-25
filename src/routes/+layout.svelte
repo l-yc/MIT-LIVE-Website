@@ -27,28 +27,39 @@
         {name}
       </a>
 
-      <button
-        type="button"
-        role="switch"
-        aria-label="Toggle Dark Mode"
-        aria-checked={isDarkMode}
-        class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"
-        on:click={() => {
-          isDarkMode = !isDarkMode
-          localStorage.setItem('isDarkMode', isDarkMode.toString())
+      <!--<a href="/posts" class="hidden text-sm font-medium text-teal-500 sm:block">-->
+			<div class="flex items-center space-x-3">
+				<nav class="flex items-center space-x-3">
+					<a href="/members" data-sveltekit-prefetch class="">
+						Members	
+					</a>
+					<a href="/showcase" data-sveltekit-prefetch class="">
+						Showcase	
+					</a>
+				</nav>
+				<button
+					type="button"
+					role="switch"
+					aria-label="Toggle Dark Mode"
+					aria-checked={isDarkMode}
+					class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"
+					on:click={() => {
+						isDarkMode = !isDarkMode
+						localStorage.setItem('isDarkMode', isDarkMode.toString())
 
-          disableTransitionsTemporarily()
+						disableTransitionsTemporarily()
 
-          if (isDarkMode) {
-            document.querySelector('html').classList.add('dark')
-          } else {
-            document.querySelector('html').classList.remove('dark')
-          }
-        }}
-      >
-        <MoonIcon class="hidden text-zinc-500 dark:block" />
-        <SunIcon class="block text-zinc-400 dark:hidden" />
-      </button>
+						if (isDarkMode) {
+							document.querySelector('html').classList.add('dark')
+						} else {
+							document.querySelector('html').classList.remove('dark')
+						}
+					}}
+				>
+					<MoonIcon class="hidden text-zinc-500 dark:block" />
+					<SunIcon class="block text-zinc-400 dark:hidden" />
+				</button>
+			</div>
     </header>
     <main
       class="flex flex-col flex-grow w-full mx-auto"

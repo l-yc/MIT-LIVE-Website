@@ -20,7 +20,8 @@
       <img
         src={avatar}
         alt={name}
-        class="mx-auto rounded-full w-36 h-36 ring-2 ring-zinc-200 dark:ring-zinc-700"
+				data-sveltekit-prefetch 
+        class="mx-auto rounded ring-2 ring-zinc-200 dark:ring-zinc-700"
       />
       <div class="flex gap-6">
         <SocialLinks />
@@ -28,12 +29,24 @@
       <p class="text-base text-zinc-600 dark:text-zinc-400">
         {bio}
       </p>
+      <p class="text-base text-zinc-600 dark:text-zinc-400">
+				We're looking for singers, guitarists, pianists, bassists, drummers, or frankly any instrument you can think of!
+			</p>
+			<a 
+				href="/about"
+				class="
+				bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400
+				px-4 py-2 rounded cursor-pointer ring-zinc-200 dark:ring-zinc-700
+				text-white
+				">
+				Meet Us
+			</a>
     </div>
   </section>
   <section class="w-full">
     <div class="flex items-center justify-between gap-4 mb-8">
       <h2 class="text-sm font-medium sm:text-base text-zinc-500 dark:text-zinc-400">
-        Recently Published
+        News
       </h2>
       <a href="/posts" class="flex items-center gap-1 text-sm font-medium text-teal-500"
         >View All <ArrowRightIcon class="w-4 h-4" /></a
