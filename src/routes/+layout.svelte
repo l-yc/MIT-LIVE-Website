@@ -30,12 +30,15 @@
       <!--<a href="/posts" class="hidden text-sm font-medium text-teal-500 sm:block">-->
 			<div class="flex items-center space-x-3">
 				<nav class="flex items-center space-x-3">
-					<a href="/members" data-sveltekit-prefetch class="">
+					<a href="/posts" data-sveltekit-prefetch class="">
+						News	
+					</a>
+					<!--<a href="/members" data-sveltekit-prefetch class="">
 						Members	
 					</a>
 					<a href="/showcase" data-sveltekit-prefetch class="">
 						Showcase	
-					</a>
+					</a>-->
 				</nav>
 				<button
 					type="button"

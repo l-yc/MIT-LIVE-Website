@@ -3,12 +3,12 @@
 // feel free to remove this file.
 
 // URL of your website
-export const website = 'https://sveltekit-blog-template.vercel.app'
+export const website = 'https://liveband.mit.edu'
 
 export const name = `MIT LIVE`
 
 // Used for the landing page & footer of posts
-export const avatar = './logo.png'
+export const avatar = '/logo.png'
 export const bio = `\
 We're MIT LIVE, one of MIT's newest music groups centered around giving musicians the opportunity to play with others in a live setting!
 `

@@ -8,7 +8,7 @@
   export let data
 
   $: isFirstPage = data.page === 1
-  $: hasNextPage = data.posts[data.posts.length - 1]?.previous
+  $: hasNextPage = data.members[data.members.length - 1]?.previous
 </script>
 
 <svelte:head>
@@ -24,11 +24,25 @@
   </header>
 
   <div class="mt-16 sm:mt-20">
-    <!--<PostsList posts={data.posts} />-->
+		<!--{JSON.stringify(data.members)}-->
+			<!--<PostsList posts={data.posts} />-->
+		<ul class="grid items-center grid-cols-4 gap-8">
+			{#each data.members as member}
+				<li class="flex flex-col items-center">
+					<!--<PostDate class="flex-col hidden md:flex text-sm" {member} />-->
+					<img src={member.img} alt={member.name} class="rounded" />
+					<h2 class="font-bold">{member.name}</h2>
+					<h3>{member.role}</h3>
+					<!--<h3>{member.class}</h3>-->
+
+					<p>{member.bio}</p>
+				</li>
+			{/each}
+		</ul>
   </div>
 
   <!-- pagination -->
-  <div class="flex items-center justify-between pt-16 pb-8">
+  <!--<div class="flex items-center justify-between pt-16 pb-8">
     {#if !isFirstPage}
       <a href={`/posts/${data.page - 1}`} data-sveltekit-prefetch>
         <ArrowLeftIcon class="w-4 h-4" />
@@ -44,7 +58,7 @@
         <ArrowRightIcon class="w-4 h-4" />
       </a>
     {/if}
-  </div>
+  </div>-->
 </div>
 
 <style>
